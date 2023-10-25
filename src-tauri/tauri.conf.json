@@ -1,0 +1,61 @@
+{
+  "build": {
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "google-chat-tauri",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "security": {
+      "csp": null,
+      "dangerousRemoteDomainIpcAccess": [
+        {
+          "domain": "chat.google.com",
+          "enableTauriAPI": true,
+          "windows": ["google-chat-tauri"]
+        },
+        {
+          "domain": "mail.google.com",
+          "enableTauriAPI": true,
+          "windows": ["google-chat-tauri"]
+        }
+      ]
+    },
+    "allowlist": {
+      "all": false,
+      "notification": {
+        "all": true
+      },
+      "path": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "category": "Productivity",
+      "identifier": "com.google.chat.tauri",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "Google Chat",
+        "width": 800,
+        "height": 600
+      }
+    ]
+  }
+}
