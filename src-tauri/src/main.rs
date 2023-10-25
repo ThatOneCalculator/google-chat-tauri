@@ -7,6 +7,12 @@ use tauri::{
 };
 use tauri::{Manager, Window};
 
+#[derive(Clone, serde::Serialize)]
+struct Payload {
+    args: Vec<String>,
+    cwd: String,
+}
+
 #[tauri::command]
 async fn close_splashscreen(window: Window) {
     window
@@ -30,6 +36,12 @@ fn main() {
         .add_item(hide);
 
     tauri::Builder::default()
+        .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
+            println!("{}, {argv:?}, {cwd}", app.package_info().name);
+
+            app.emit_all("single-instance", Payload { args: argv, cwd })
+                .unwrap();
+        }))
         .system_tray(SystemTray::new().with_menu(tray_menu))
         .on_system_tray_event(|app, event| match event {
             SystemTrayEvent::MenuItemClick { id, .. } => {

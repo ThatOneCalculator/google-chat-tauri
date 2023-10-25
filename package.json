@@ -1,7 +1,7 @@
 {
   "name": "google-chat-tauri",
   "private": true,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A Google Chat desktop app built with Tauri",
   "packageManager": "pnpm@8.9.2",
   "type": "module",
