@@ -11,7 +11,7 @@ Pros:
 - Not Electron
 - Relatively small, both in file size and memory usage
 - Notifications
-- Cool splash screen that you'll probably never see
+- Cool splash screen
 
 Cons:
 
