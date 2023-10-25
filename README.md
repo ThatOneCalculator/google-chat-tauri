@@ -33,11 +33,14 @@ Plans:
   - [ ] Reactive for notifications
   - [ ] Fix monochrome on non-macOS
 - [ ] Custom CSS & JS
+- [ ] Custom settings
+  - [ ] Config file
+  - [ ] Possibly injecting custom settings into web UI (low priority)
 
 Non-plans:
 
-- Adding features outside of my use case
-- Turning this into a "big project"
+- Adding features far outside of my use case or a "reasonable" use case
+- Turning this into a "big project" (it doesn't need to be)
 - Mobile builds
 
 Credits:
