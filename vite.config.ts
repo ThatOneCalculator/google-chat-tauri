@@ -15,7 +15,18 @@ export default defineConfig(async () => ({
   // https://tauri.app/v1/api/config#buildconfig.beforedevcommand
   envPrefix: ["VITE_", "TAURI_"],
 
+  optimizeDeps: {
+    include: ["@tauri-apps/api"],
+  },
+
   build: {
     target: "esnext",
+    cssMinify: "lightningcss",
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        splash: "splash.html",
+      },
+    },
   },
 }));
