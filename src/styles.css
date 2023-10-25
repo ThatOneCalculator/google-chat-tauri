@@ -1,11 +1,11 @@
-:root, body {
-  color: #5F6368;
-  background-color: #F6F6F6;
+:root,
+body {
+  color: #5f6368;
+  background-color: #f6f6f6;
 }
 
 .container {
   margin: 0;
-  padding-top: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +13,173 @@
 }
 
 .title {
-  margin-top: 5rem;
-  height: 3rem;
+  height: 2rem;
+}
+
+@keyframes a-lb {
+  0% {
+    transform: translateX(-300px);
+  }
+  5% {
+    transform: translateX(-240px);
+  }
+  15% {
+    transform: translateX(-30px);
+  }
+  25% {
+    transform: translateX(-30px);
+  }
+  30% {
+    transform: translateX(-20px);
+  }
+  45% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  65% {
+    transform: translateX(-15px);
+  }
+  70% {
+    transform: translateX(-10px);
+  }
+  95% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes a-s {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes a-h {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes a-nt {
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes c-rm {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes c-rso {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95238);
+  }
+}
+
+@keyframes c-rst {
+  0% {
+    transform: scale(0.95238);
+  }
+  53% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes c-so {
+  0% {
+    transform: scale(0.72);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes c-st {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.96);
+  }
+}
+
+@keyframes c-sth {
+  0% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes c-fi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes c-abso {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes c-abst {
+  0% {
+    transform: scale(1.05);
+  }
+  53% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes c-abf {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(157px, -166px);
+  }
+}
+
+@keyframes c-tf {
+  0% {
+    transform: rotate(-45deg) translate(0px, 0px);
+  }
+  100% {
+    transform: rotate(-45deg) translate(157px, -166px);
+  }
+}
+
+@keyframes c-bbf {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-100%, 100%);
+  }
 }

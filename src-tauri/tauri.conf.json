@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "google-chat-tauri",
-    "version": "0.0.1"
+    "version": "0.0.2"
   },
   "tauri": {
     "security": {
@@ -50,13 +50,26 @@
     },
     "windows": [
       {
-        "label": "main",
         "fullscreen": false,
         "resizable": true,
         "title": "Google Chat",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "label": "main"
+      },
+      {
+        "width": 276,
+        "height": 350,
+        "decorations": false,
+        "resizable": false,
+        "alwaysOnTop": true,
+        "url": "splash.html",
+        "label": "splashscreen"
       }
-    ]
+    ],
+    "systemTray": {
+      "iconAsTemplate": true,
+      "iconPath": "icons/tray-icons/monochrome.png"
+    }
   }
 }
