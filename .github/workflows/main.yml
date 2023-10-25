@@ -38,7 +38,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
-          releaseName: 'App v__VERSION__'
-          releaseBody: 'See the assets to download this version and install.'
-          releaseDraft: true
+          releaseName: 'v__VERSION__'
+          releaseBody: 'Assets are as follows:
+            - `.AppImage` or `.deb` for Linux
+            - `.dmg` or `.app.tar.gz` for macOS
+            - `.exe` or `.msi` for Windows
+
+            Please note that the builds are not signed.'
+          releaseDraft: false
           prerelease: false
