@@ -10,7 +10,6 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@fontsource/open-sauce-sans": "^5.0.7",
     "@tauri-apps/api": "^1.5.0"
   },
   "devDependencies": {

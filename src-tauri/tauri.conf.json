@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "google-chat-tauri",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "security": {
@@ -17,12 +17,12 @@
         {
           "domain": "chat.google.com",
           "enableTauriAPI": true,
-          "windows": ["google-chat-tauri"]
+          "windows": ["main"]
         },
         {
           "domain": "mail.google.com",
           "enableTauriAPI": true,
-          "windows": ["google-chat-tauri"]
+          "windows": ["main"]
         }
       ]
     },
@@ -50,6 +50,7 @@
     },
     "windows": [
       {
+        "label": "main",
         "fullscreen": false,
         "resizable": true,
         "title": "Google Chat",
