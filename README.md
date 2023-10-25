@@ -19,7 +19,7 @@ Obligatory screenshot:
 Pros:
 
 - Not Electron
-- Relatively small, both in file size and memory usage
+- Relatively small, both in file size (17MB binary and 488KB saved cache on Linux) and memory usage (~800-1000MB average with a space open)
 - Notifications
 - Cool splash screen
 
