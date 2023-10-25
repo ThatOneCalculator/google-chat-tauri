@@ -39,10 +39,10 @@ jobs:
         with:
           tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
           releaseName: 'v__VERSION__'
-          releaseBody: 'Assets are as follows:
-            - `.AppImage` or `.deb` for Linux
-            - `.dmg` or `.app.tar.gz` for macOS
-            - `.exe` or `.msi` for Windows
+          releaseBody: 'Assets are as follows:\n
+            - `.AppImage` or `.deb` for Linux\n
+            - `.dmg` or `.app.tar.gz` for macOS\n
+            - `.exe` or `.msi` for Windows\n\n
 
             Please note that the builds are not signed.'
           releaseDraft: false
