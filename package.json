@@ -1,7 +1,9 @@
 {
   "name": "google-chat-tauri",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A Google Chat desktop app built with Tauri",
+  "packageManager": "pnpm@8.9.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,11 +12,12 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.5.0"
+    "@tauri-apps/api": "^1.5.0",
+    "pnpm": "^8.9.2"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.5.0",
-    "vite": "^4.4.4",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "vite": "^4.4.4"
   }
 }
