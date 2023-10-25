@@ -4,7 +4,7 @@ Run Google Chat as a "real" application with Tauri
 
 Tech stack:
 
-[![tauri badge](https://img.shields.io/badge/made_with-tauri-FFC131?logo=tauri&style=for-the-badge)](https://tauri.app) [![vite badge](https://img.shields.io/badge/bundled_with-vite-BC33FE?logo=vite&style=for-the-badge)](https://vitejs.dev) [![typescript badge](https://img.shields.io/badge/built_with-typescript-3176C3?logo=typescript&style=for-the-badge)](https://www.typescriptlang.org/) [![bun badge](https://img.shields.io/badge/managed_by-bun-F9F1E1?logo=bun&style=for-the-badge)](https://bun.sh)
+[![tauri badge](https://img.shields.io/badge/made_with-tauri-FFC131?logo=tauri&style=for-the-badge)](https://tauri.app) [![vite badge](https://img.shields.io/badge/bundled_with-vite-BC33FE?logo=vite&style=for-the-badge)](https://vitejs.dev) [![typescript badge](https://img.shields.io/badge/built_with-typescript-3176C3?logo=typescript&style=for-the-badge)](https://www.typescriptlang.org/) [![bun badge](https://img.shields.io/badge/managed_with-bun-F9F1E1?logo=bun&style=for-the-badge)](https://bun.sh)
 
 Pros:
 
