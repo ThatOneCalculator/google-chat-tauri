@@ -4,7 +4,7 @@ Run Google Chat as a "real" application with Tauri
 
 ## Download (Linux, Windows, macOS):
 
-[![download windows](https://img.shields.io/badge/download_for-windows-0079D5?logo=windows&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v0.0.7/Google.Chat_0.0.7_x64-setup.exe) [![download macOS](https://img.shields.io/badge/download_for-macOS-000000?logo=apple&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v0.0.7/Google.Chat_0.0.7_x64.dmg) [![download linux appimage](https://img.shields.io/badge/download_for-Linux_Appimage-709DB7?logo=linux&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v0.0.7/google-chat_0.0.7_amd64.AppImage) [![download linux deb](https://img.shields.io/badge/download_for-Linux_.deb-EA4F06?logo=ubuntu&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v0.0.7/google-chat_0.0.7_amd64.deb)
+<https://github.com/ThatOneCalculator/google-chat-tauri/releases/latest>
 
 ---
 
