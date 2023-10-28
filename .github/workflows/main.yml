@@ -41,9 +41,4 @@ jobs:
         with:
           tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
           releaseName: 'v__VERSION__'
-          releaseBody: 'Assets are as follows:\n
-            - `.AppImage` or `.deb` for Linux\n
-            - `.dmg` or `.app.tar.gz` for macOS\n
-            - `.exe` or `.msi` for Windows\n\n
-
-            Please note that the builds are not signed.'
+          releaseBody: '[![download windows](https://img.shields.io/badge/download_for-windows-0079D5?logo=windows&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v__VERSION__/Google.Chat___VERSION___x64-setup.exe) [![download macOS](https://img.shields.io/badge/download_for-macOS-000000?logo=apple&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v__VERSION__/Google.Chat___VERSION___x64.dmg) [![download linux appimage](https://img.shields.io/badge/download_for-Linux_Appimage-709DB7?logo=linux&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v__VERSION__/google-chat___VERSION___amd64.AppImage) [![download linux deb](https://img.shields.io/badge/download_for-Linux_.deb-EA4F06?logo=ubuntu&style=for-the-badge)](https://github.com/ThatOneCalculator/google-chat-tauri/releases/download/app-v__VERSION__/google-chat___VERSION___amd64.deb)'
