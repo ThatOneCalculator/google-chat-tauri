@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "Google Chat",
-    "version": "0.0.6"
+    "version": "0.0.7"
   },
   "tauri": {
     "security": {
@@ -75,8 +75,9 @@
       "iconPath": "icons/tray-icons/monochrome.png"
     },
     "updater": {
-      "active": false,
+      "active": true,
       "endpoints": [
+        "https://github.com/ThatOneCalculator/google-chat-tauri/releases/latest/download/latest.json"
       ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDEzREQ5MEI2RTA3M0ZBMApSV1NnUHdkdUM5azlBZDN3alNldGFjNXAraWdERGRuRjlTcnVGNVArZVRIK2U3alZzV3ozWkFFNQo="
