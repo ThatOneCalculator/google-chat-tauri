@@ -21,7 +21,6 @@ Pros:
 - Not Electron
 - Relatively small, both in file size (17MB binary and 488KB saved cache on Linux) and memory usage (~800-1000MB average with a space open)
 - Notifications
-- Cool splash screen
 
 Cons:
 
@@ -49,5 +48,5 @@ Non-plans:
 
 Credits:
 
-- <https://github.com/squalou/google-chat-linux/> - Inspiration and icons
+- <https://github.com/squalou/google-chat-linux/> - Inspiration
 - `create-tauri-app` - Scaffolding template

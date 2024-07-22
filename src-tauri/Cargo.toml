@@ -1,19 +1,19 @@
 [package]
 name = "google-chat-tauri"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+version = "0.0.8"
+description = "Google Chat"
+authors = ["Kainoa Kanter <kainoa@t1c.dev>"]
 license = ""
-repository = ""
+repository = "https://github.com/ThatOneCalculator/google-chat-tauri"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "1.5", features = [] }
+tauri-build = { version = "1.5.3", features = [] }
 
 [dependencies]
-tauri = { version = "1.5", features = [ "updater", "shell-open", "system-tray", "path-all", "notification-all"] }
+tauri = { version = "1.7.1", features = [ "updater", "shell-open", "system-tray", "path-all", "notification-all"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 tauri-plugin-single-instance = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }

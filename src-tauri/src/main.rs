@@ -5,26 +5,12 @@ use tauri::{
     CustomMenuItem, SystemTray, SystemTrayEvent, SystemTrayMenu, SystemTrayMenuItem,
     SystemTrayMenuItemHandle,
 };
-use tauri::{Manager, Window};
+use tauri::Manager;
 
 #[derive(Clone, serde::Serialize)]
 struct Payload {
     args: Vec<String>,
     cwd: String,
-}
-
-#[tauri::command]
-async fn close_splashscreen(window: Window) {
-    window
-        .get_window("splashscreen")
-        .expect("no window labeled 'splashscreen' found")
-        .close()
-        .unwrap();
-    window
-        .get_window("main")
-        .expect("no window labeled 'main' found")
-        .show()
-        .unwrap();
 }
 
 fn main() {
@@ -74,43 +60,17 @@ fn main() {
             }
             _ => {}
         })
-        .invoke_handler(tauri::generate_handler![close_splashscreen])
+
         .setup(|app| {
             let window = app.get_window("main").unwrap();
             tauri::async_runtime::spawn(async move {
                 println!("Initializing...");
 
-                let check_page_js = "
-                const invoke = window.__TAURI__.invoke
+                let _loader = window.eval("window.location.replace('https://mail.google.com/chat/u/0')");
 
-                const closeSplash = () => {
-                    const currentLocation =
-                    if (window.location.href.toString().includes(#onboarding)) {
-                        invoke('close_splashscreen')
-                        return true;
-                    }
-                    return false;
-                }";
-
-                let _loader =
-                    window.eval("window.location.replace('https://mail.google.com/chat/u/0')");
                 let _hide = window.hide();
+                // let _loader = window.eval("window.location.replace('https://mail.google.com/chat/u/0')");
 
-                std::thread::sleep(std::time::Duration::from_millis(800));
-                let _invoke_first = window.eval(check_page_js);
-
-                std::thread::sleep(std::time::Duration::from_millis(2000));
-                let _invoke_second = window.eval(check_page_js);
-
-                std::thread::sleep(std::time::Duration::from_millis(2000));
-                let _invoke_third = window.eval(check_page_js);
-
-                std::thread::sleep(std::time::Duration::from_millis(2000));
-                window
-                    .get_window("splashscreen")
-                    .expect("no window labeled 'splashscreen' found")
-                    .close()
-                    .unwrap();
                 window
                     .get_window("main")
                     .expect("no window labeled 'main' found")
