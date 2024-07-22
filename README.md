@@ -29,7 +29,7 @@ Cons:
 Plans:
 
 - [x] Linux, macOS, and Windows builds
-  - [ ] AUR package
+  - [x] [AUR package](https://aur.archlinux.org/packages/google-chat-tauri-bin)
   - [ ] Flathub
 - [x] System tray
   - [ ] Add options
