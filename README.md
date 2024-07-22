@@ -20,7 +20,7 @@ Tech stack:
 
 Obligatory screenshot:
 
-![screenshot of google chat settings with a test notification](https://github.com/ThatOneCalculator/google-chat-tauri/assets/44733677/229e3955-94f8-4eaf-81ce-a7d376993406)
+![image](https://github.com/user-attachments/assets/64483e35-d5ed-46c6-99ba-90aa25779848)
 
 Pros:
 
