@@ -6,6 +6,12 @@ Run Google Chat as a "real" application with Tauri
 
 <https://github.com/ThatOneCalculator/google-chat-tauri/releases/latest>
 
+### AUR package (Arch Linux)
+
+```sh
+yay -S google-chat-tauri-bin
+```
+
 ---
 
 Tech stack:
