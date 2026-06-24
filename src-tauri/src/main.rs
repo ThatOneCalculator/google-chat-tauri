@@ -7,6 +7,8 @@ use tauri::{
 };
 use tauri::Manager;
 
+mod clipboard;
+
 #[derive(Clone, serde::Serialize)]
 struct Payload {
     args: Vec<String>,
@@ -22,6 +24,12 @@ fn main() {
         .add_item(hide);
 
     tauri::Builder::default()
+        .invoke_handler(tauri::generate_handler![clipboard::read_clipboard_image])
+        // Re-inject the clipboard-image paste fallback on every page load so it
+        // survives SPA navigations/reloads.
+        .on_page_load(|window, _payload| {
+            let _ = window.eval(include_str!("paste_inject.js"));
+        })
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
             println!("{}, {argv:?}, {cwd}", app.package_info().name);
 
