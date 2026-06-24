@@ -7,6 +7,8 @@ use tauri::{
 };
 use tauri::Manager;
 
+mod unread;
+
 #[derive(Clone, serde::Serialize)]
 struct Payload {
     args: Vec<String>,
@@ -77,6 +79,28 @@ fn main() {
                     .show()
                     .unwrap();
             });
+
+            // Poll the window title for the unread count and reflect it as a
+            // numbered badge on the tray icon.
+            let poll_window = app.get_window("main").unwrap();
+            let tray = app.tray_handle();
+            std::thread::spawn(move || {
+                let mut last: i64 = -1;
+                loop {
+                    let count = poll_window
+                        .title()
+                        .map(|t| unread::parse_unread(&t))
+                        .unwrap_or(0);
+                    if count as i64 != last {
+                        last = count as i64;
+                        if let Some(icon) = unread::render_icon(count) {
+                            let _ = tray.set_icon(icon);
+                        }
+                    }
+                    std::thread::sleep(std::time::Duration::from_secs(2));
+                }
+            });
+
             Ok(())
         })
         .run(tauri::generate_context!())
