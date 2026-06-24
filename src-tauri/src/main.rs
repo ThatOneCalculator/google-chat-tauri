@@ -25,6 +25,15 @@ fn main() {
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
             println!("{}, {argv:?}, {cwd}", app.package_info().name);
 
+            // A second launch (e.g. from rofi/anyrun) should reveal & focus the
+            // existing window instead of doing nothing.
+            if let Some(window) = app.get_window("main") {
+                let _ = window.unminimize();
+                let _ = window.show();
+                let _ = window.set_focus();
+                let _ = app.tray_handle().get_item("hide").set_title("Hide");
+            }
+
             app.emit_all("single-instance", Payload { args: argv, cwd })
                 .unwrap();
         }))
@@ -55,7 +64,14 @@ fn main() {
         })
         .on_window_event(|event| match event.event() {
             tauri::WindowEvent::CloseRequested { api, .. } => {
-                event.window().hide().unwrap();
+                let window = event.window();
+                window.hide().unwrap();
+                // Keep the tray toggle label in sync with the now-hidden window.
+                let _ = window
+                    .app_handle()
+                    .tray_handle()
+                    .get_item("hide")
+                    .set_title("Show");
                 api.prevent_close();
             }
             _ => {}
